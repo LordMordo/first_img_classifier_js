@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Img Classifier</title>
     <!-- Load the latest version of TensorFlow.js -->
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <style>
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #111;
+      }
+    </style>
   </head>
   <body>
-    <div id="console"></div>
+    <div id="console">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+    </div>
     <!-- Add an image that we will use to test -->
-    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+    <video autoplay playsinline muted id="webcam" width="224" height="224" align="middle"></video>
     <!-- add buttons -->
-    <button id="class-a">Add A</button>
-    <button id="class-b">Add B</button>
-    <button id="class-c">Add C</button>
-    <button id="no-action">Nope</button>
+    <button class="button" id="class-a" >Add A</button>
+    <button class="button" id="class-b">Add B</button>
+    <button class="button" id="class-c">Add C</button>
+    <button class="button" id="no-action">Nope</button>
     <!-- Load index.js after the content of the page -->
     <script src="index.js"></script>
   </body>
 </html>
+
